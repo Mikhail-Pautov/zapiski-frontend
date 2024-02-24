@@ -1,14 +1,14 @@
 import { useSelector } from 'react-redux';
-import  { fetchNotes, selectAll, selectById, createNote, deleteNoteInTrash }  from '../../redux/sllices/notesSlice';
+import  { createNote, deleteNoteInTrash }  from '../../redux/sllices/notesSlice';
 import NoteItem from '../noteItem/NoteItem';
 import { useEffect, useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchNotesTrash, clearNotesInTrash } from '../../redux/sllices/notesSlice';
 import { useHttp } from '../../hooks/http.hook';
-import store from '../../redux/store';
+
 import Menu from '../menu/Menu';
 import { Notification } from '../notification/Notification'
-import { fetchAuthMe, selectIsAuth } from '../../redux/sllices/auth';
+import { selectIsAuth } from '../../redux/sllices/auth';
 import { Navigate } from "react-router-dom";
 
 
@@ -37,7 +37,7 @@ const Trash = () => {
 
     const clearTrash = () => {
         getNotesInTradh.forEach(element => {
-            request(`http://localhost:4444/trash/${element._id}`, 'DELETE')
+            request(`${process.env.REACT_APP_API_URL}/trash/${element._id}`, 'DELETE')
                 .then(dispatch(clearNotesInTrash()))
                 .catch(() => console.log('error go trash'))
         }); 
@@ -57,14 +57,14 @@ const Trash = () => {
         }) 
 
         
-        request('http://localhost:4444/notes', 'POST', JSON.stringify(...note))
+        request(`${process.env.REACT_APP_API_URL}/notes`, 'POST', JSON.stringify(...note))
             .then(() => {dispatch(createNote(...note));})
             .catch(() => {console.log('slomal')
             
         }); 
 
         
-        request(`http://localhost:4444/trash/${id}`, 'DELETE',)
+        request(`${process.env.REACT_APP_API_URL}/trash/${id}`, 'DELETE',)
             .then(dispatch(deleteNoteInTrash(id)))
             .catch(() => console.log('error delete'));
             // eslint-disable-next-line  

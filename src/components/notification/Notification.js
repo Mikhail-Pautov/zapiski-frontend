@@ -1,5 +1,5 @@
 import './notification.scss';
-import { Link } from 'react-router-dom'
+
 
 export const Notification = (props) => {
     console.log(props);

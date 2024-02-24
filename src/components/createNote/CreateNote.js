@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+
 import { useHttp } from '../../hooks/http.hook';
 import { useSelector, useDispatch} from 'react-redux';
 import {  createNote, hideCreateNote, fetchNotes } from '../../redux/sllices/notesSlice';
@@ -57,7 +57,7 @@ const CreateNote = () => {
         }
         
         console.log('note', note);
-        request('http://localhost:4444/notes', 'POST', JSON.stringify(note))
+        request(`${process.env.REACT_APP_API_URL}/notes'`, 'POST', JSON.stringify(note))
                 .then((res) => {
                     dispatch(createNote({...note, _id: res._id})); 
                     setSavedNote(true);

@@ -1,27 +1,27 @@
 import { hideCreateNote, hideSearhPanel, getTegSearchPanelInput, getDataSearchPanelInput } from "../../redux/sllices/notesSlice"
 import { useSelector, useDispatch} from 'react-redux';
 import { useState } from 'react';
-import {Link, NavLink} from "react-router-dom";
-//import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import { Notification } from '../notification/Notification'
 import { logout } from '../../redux/sllices/auth'
 
 
-import { redirect } from "react-router-dom";
+
 import './menu.scss';
 
 const Menu = () => {
     
 
 
-    //console.log(logout, 'logout');
+    
 
     
 
     const dispatch = useDispatch();
     const checkShowSearch = useSelector(state => state.notes.showSearchPanel);
     const [ showNotification, setShowNotification] = useState(false);
-    const [toExit, setToExit] = useState(false);
+    
 
    
     dispatch(logout);

@@ -1,6 +1,6 @@
 import './searchPanel.scss';
 import { useState } from 'react'; 
-import  { fetchNotes, selectAll, getDataSearchPanelInput, getTegSearchPanelInput, filterinfNotes }  from '../../redux/sllices/notesSlice';
+import  {  selectAll, getDataSearchPanelInput, getTegSearchPanelInput }  from '../../redux/sllices/notesSlice';
 import { useSelector, useDispatch} from 'react-redux';
 
 

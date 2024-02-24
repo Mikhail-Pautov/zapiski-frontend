@@ -4,16 +4,16 @@ import SearchPanel from '../searshPanel/SearchPanel';
 import { useHttp } from '../../hooks/http.hook';
 import { deleteNote } from '../../redux/sllices/notesSlice';
 import  { fetchNotes, selectAll, selectById, addNoteInTrash, getTegSearchPanelInput }  from '../../redux/sllices/notesSlice';
-import { Redirect } from "react-router-dom";
+
 import { useSelector, useDispatch} from 'react-redux';
 import store from '../../redux/store';
-import axios from '../../axios'
+
 import { useEffect, useCallback, useState } from 'react';
-import { fetchAuthMe, selectIsAuth } from '../../redux/sllices/auth';
+import { selectIsAuth } from '../../redux/sllices/auth';
 import { Navigate } from "react-router-dom";
-import { redirect } from "react-router-dom";
+
 import './notesList.scss';
-import { createSelector } from '@reduxjs/toolkit';
+
 import Menu from '../menu/Menu';
 
 
@@ -97,11 +97,11 @@ const NotesList = () => {
         console.log(id);
         let note = selectById(store.getState(), id)
         //dispatch(addNoteInTrash(note))
-        request(`http://localhost:4444/trash`, 'POST', JSON.stringify(note))
+        request(`${process.env.REACT_APP_API_URL}/trash`, 'POST', JSON.stringify(note))
             .then(dispatch(addNoteInTrash(note)))
             .catch(() => console.log('error go trash'))
 //
-        request(`http://localhost:4444/notes/${id}`, 'DELETE',)
+        request(`${process.env.REACT_APP_API_URL}/notes/${id}`, 'DELETE',)
             .then(dispatch(deleteNote(id)))
 
         .catch(() => console.log('error delete'))

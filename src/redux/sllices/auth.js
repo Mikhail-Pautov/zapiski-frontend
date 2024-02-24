@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from '../../axios';
-import {useHttp} from '../../hooks/http.hook';
+
 
 
 export const fetchAuth = createAsyncThunk('auth/fetchUserData', async (params) => {

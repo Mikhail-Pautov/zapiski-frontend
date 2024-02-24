@@ -20,7 +20,7 @@ import styles from "./Login.module.scss";
 
 
  
-  const { register, handleSubmit, setError, formState: { errors, isValid } } = useForm({
+  const { register, handleSubmit,  formState: { errors, isValid } } = useForm({
     defaultValues: {
       email: '',
       password: '',
