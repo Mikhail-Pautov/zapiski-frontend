@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+
+.trash{
+    //outline: 1px solid red;
+    width: 100%;
+    display: flex;
+    &__wrapper{
+        margin-top: 5px;
+        //outline: 1px solid rgb(81, 255, 0);
+        //display: flex;
+        //justify-content: flex-start;
+        height: 25px;
+    }
+    &__wrapper-top{
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__title{
+        color: $color-icons;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-right: 1px solid #CACACA;
+        font-size: 15px;
+    }
+    &__btn{
+        padding-left: 10px;
+        color: $color-icons;
+        font-size: 15px;
+        cursor: pointer;
+        &:hover{
+            color: $text-color;
+        }
+    }
+    &__wrapper-content{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        //outline: 1px solid rgb(228, 11, 202);
+    }
+}
+
+.no-records{
+    color: red;
+}

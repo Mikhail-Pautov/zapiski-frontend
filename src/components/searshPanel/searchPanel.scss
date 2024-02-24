@@ -1,0 +1,102 @@
+@import '../../styles/variables.scss';
+
+
+.search-panel{
+    margin-top: 4px;
+    display: flex;
+        &__text{
+            color: $color-icons;
+            margin-right: 10px;
+            padding-right: 10px;
+            margin-left: 10px;
+            font-size: 15px;
+        }
+        &__item{
+            color: $color-icons;
+            margin-right: 10px;
+            padding-right: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            border-right: 1px solid #CACACA;
+            &:hover{
+                color: $text-color;
+            }
+            &:last-child{
+                border: none;
+            }
+        }
+        &__date, &__teg{
+            margin-left: 70px;
+            display: flex;
+        }
+        &__btn, &__clear-result{
+            margin-left: 5px;
+            color: $color-icons;
+            border: 1px solid #CACACA;
+            border-radius: 4px;
+            padding: 0 5px 0 5px;
+            cursor: pointer;
+            &:hover{
+                border-color: $text-color; 
+            }
+        }
+        &__date, &__teg{
+            font-size: 14px;
+            & input{
+                color: $color-icons;
+                padding-left: 5px;
+                border-width: 1px;
+                border: 1px solid #CACACA;
+                margin-right: 10px;
+                border-radius: 4px;
+            }
+            & input:focus{
+                outline:none;
+
+            }
+        }
+        &__clear-result{
+            margin-left: 100px;
+            font-size: 14px;
+        }
+        &__show-tags{
+            position: relative;
+            width: 20px;
+            border: 1px solid #CACACA;
+            border-radius: 4px;
+            padding-left: 4px;
+            margin-right: 20px;
+            cursor: pointer;
+            color: $color-icons;
+            &:hover{
+                border-color: $text-color; 
+            }
+           
+        }
+}
+
+.allTags{
+    position: absolute;
+    min-width: 150px;
+    top: 32px;
+    right:-3px;
+    outline: 1px solid #CACACA;
+    border-radius: 4px;
+    background-color: $main-color;
+    padding: 3px 10px 0 10px;
+    &__title{
+        color: $color-icons;
+        font-size: 15px;
+    }
+    &__list{
+        li {
+            color: $color-icons;
+            list-style-type: none;
+            font-size: 15px;
+            cursor: pointer;
+            &:hover{
+                color: $text-color; 
+            }
+        }
+    }
+}

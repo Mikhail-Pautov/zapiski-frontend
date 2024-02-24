@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+
+.note-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 250px;
+    padding: 5px;
+    background-color: $bg-note;
+    border: 1px solid #CACACA;
+    border-radius: 4px;
+    color: $text-color;
+    margin: 10px;
+    &__text{
+        height: 169px;
+        border-radius: 5px;
+        color: $text-color;
+        overflow-wrap: break-word;
+        line-height: 22px;
+        white-space: pre-line;
+    }
+    &__botom{
+        display: flex;
+        justify-content: space-between;
+        //background-color: aqua;
+        //border-radius: 5px;
+    }
+    &__trash svg { 
+        fill: #CACACA; 
+        stroke: #CACACA; 
+       
+       &:hover{
+        stroke: $text-color;
+       }
+    }
+    &__teg, &__recover-note{
+        padding-top: 8px;
+        color: $color-icons;
+        font-size: 12px;
+    }
+    &__recover-note{
+        cursor: pointer;
+        &:hover{
+            color: $text-color;
+        }
+    }
+}
