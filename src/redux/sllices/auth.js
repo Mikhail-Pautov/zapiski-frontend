@@ -42,7 +42,7 @@ const authSlice = createSlice({
             state.data = null;
         }
     },
-    extraReducers: {
+    /* extraReducers: {
         [fetchAuth.pending]: (state) => {
             state.status = 'loading';
             state.data = null;
@@ -83,7 +83,7 @@ const authSlice = createSlice({
             state.status = 'error';
             state.data = null;
         },
-    }
+    } */
 });
 
 

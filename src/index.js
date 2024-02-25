@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from "react-router-dom";
 import App from './components/app/App';
@@ -10,8 +10,22 @@ import './styles/index.scss';
 
 
 //console.log(store);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+        <BrowserRouter >
+     <Provider store={store}>
+      <App />
+    </Provider>
+     </BrowserRouter>
+  </React.StrictMode>
+);
 
-ReactDOM.render(
+
+
+
+
+/* ReactDOM.render(
   <React.StrictMode>
      <BrowserRouter >
      <Provider store={store}>
@@ -21,5 +35,5 @@ ReactDOM.render(
     
   </React.StrictMode>,
   document.getElementById('root')
-);
+); */
 
