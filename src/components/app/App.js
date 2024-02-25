@@ -1,36 +1,36 @@
 
-import { Routes, Route } from 'react-router-dom'
-import NotesList from '../notesList/NotesList';
-import CreateNote from '../createNote/CreateNote';
-import Trash from "../trash/Trash";
-import Login from "../login/Login";
+//import { Routes, Route } from 'react-router-dom'
+//import NotesList from '../notesList/NotesList';
+//import CreateNote from '../createNote/CreateNote';
+//import Trash from "../trash/Trash";
+//import Login from "../login/Login";
+//
+//
+//import { useEffect } from "react";
+//import { useDispatch } from 'react-redux';
+//import { fetchAuthMe } from '../../redux/sllices/auth';
 
-
-import { useEffect } from "react";
-import { useDispatch } from 'react-redux';
-import { fetchAuthMe } from '../../redux/sllices/auth';
-
-import './app.scss';
+//import './app.scss';
 
 const App = () => {
     
-    const dispatch = useDispatch();
+    //const dispatch = useDispatch();
     
-    useEffect(() => {
+    /* useEffect(() => {
         dispatch(fetchAuthMe());
-      }, []);
+      }, []); */
 
      
 
     return (
         <main className="app">
-           
-            <Routes>
-                <Route path="/" element={<Login/>}/>
+           <h2>Davai rabotay!!!</h2>
+           {/*  <Routes> */}
+                {/* <Route path="/" element={<Login/>}/> */}
                 {/* <Route path="notes" element={<NotesList/>}/> */}
                 {/* <Route path="/trash" element={<Trash/>}/> */}
                 {/* <Route path="*" element={<Login/>} />    */}
-            </Routes>
+           {/*  </Routes> */}
             
           {/*   <CreateNote/> */}
         </main>
