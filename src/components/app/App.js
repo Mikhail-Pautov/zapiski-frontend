@@ -24,7 +24,7 @@ const App = () => {
 
     return (
         <main className="app">
-         <h2>Davai rabotay!!! Pes</h2> 
+         
              <Routes> 
                  <Route path="/" element={<Login/>}/> 
                  <Route path="notes" element={<NotesList/>}/> 
