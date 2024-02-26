@@ -26,7 +26,7 @@ const App = () => {
         <main className="app">
            <h2>Davai rabotay!!! Pes</h2>
              <Routes> 
-                {/* <Route path="/" element={<Login/>}/> */}
+                 <Route path="/" element={<Login/>}/> 
                 {/* <Route path="notes" element={<NotesList/>}/> */}
                 {/* <Route path="/trash" element={<Trash/>}/> */}
                 {/* <Route path="*" element={<Login/>} />    */}
