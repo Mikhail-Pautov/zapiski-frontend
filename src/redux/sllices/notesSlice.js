@@ -24,8 +24,8 @@ export const fetchNotes = createAsyncThunk(
 		//return request("http://localhost:3001/notes");
         //console.log('вызов');
 		console.log(`${process.env.REACT_APP_API_URL}`);
-        return request(`${process.env.REACT_APP_API_URL}/notes/`);
-        //return request(`https://zapiski-backend-mikhail-789.amvera.io/notes/`);
+        //return request(`${process.env.REACT_APP_API_URL}/notes/`); //тут
+        return request(`https://zapiski-backend-mikhail-789.amvera.io/notes/`);
 	}
 );
 
