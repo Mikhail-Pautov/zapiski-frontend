@@ -22,7 +22,7 @@ const CreateNote = () => {
     //console.log('та самая дата', userId);
 
     useEffect(() => {
-        if(showCreateNote) return null;
+        if(showCreateNote) return ;
         document.body.style.overflow = "hidden";
         document.addEventListener('keydown', hideWindow)
         return () => {
@@ -57,7 +57,9 @@ const CreateNote = () => {
         }
         
         console.log('note', note);
-        request(`${process.env.REACT_APP_API_URL}/notes'`, 'POST', JSON.stringify(note))
+
+        
+        request(`${process.env.REACT_APP_API_URL}/notes/`, 'POST', JSON.stringify(note))
                 .then((res) => {
                     dispatch(createNote({...note, _id: res._id})); 
                     setSavedNote(true);
