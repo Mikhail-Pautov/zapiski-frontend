@@ -11,6 +11,9 @@
 # production
 /build
 
+# Ignore dotenv environment variables file
+.env
+
 # misc
 .DS_Store
 .env.local

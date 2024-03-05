@@ -3,14 +3,10 @@
 
 
 .createNote{
-    //display: none;
     display: flex;
     justify-content: center;
     position: absolute;
-    
     background-color: rgba(250, 251, 252, 0.8);
-    
-    
     width: 100%;
     height: 100vh;
     &__wrapper{
@@ -34,7 +30,6 @@
             border: 2px solid #CACACA; 
         }
         & textarea {
-            //background-color: green;
             color: $text-color;
             border: none;
             resize: none;
@@ -57,10 +52,8 @@
         }
     }
     &__btnSave{
-        //outline: 1px solid green;
         font-size: 13px;
         color: $color-icons;
-        //width: 50%;
         text-align: right;
         cursor: pointer;
         &:hover{
@@ -92,7 +85,6 @@
   @media only screen
   and (max-device-width :450px) {
      .createNote{
-        background-color: rgba(237, 7, 130, 0.8);
         width: 950px;
         height: 100vh;
         &__text{
@@ -135,10 +127,8 @@
             }
         }
         &__btnSave{
-            //outline: 1px solid green;
             font-size: 50px;
             color: $color-icons;
-            //width: 50%;
             text-align: right;
             cursor: pointer;
             &:hover{

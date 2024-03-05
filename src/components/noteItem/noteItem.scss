@@ -61,9 +61,9 @@
 @media only screen
 and (max-device-width :450px) {
     .note-item{
-        width: 890px; //плохо
+        width: 890px; 
         height: 850px;
-        background-color: green;
+        background-color: $bg-note;
         font-size: 400%;
         padding: 25px;
         margin: 0 auto;

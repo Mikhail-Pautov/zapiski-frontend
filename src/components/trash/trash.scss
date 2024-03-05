@@ -2,12 +2,9 @@
 
 
 .trash{
-    //outline: 1px solid red;
-    
     display: flex;
     &__wrapper{
         margin-top: 5px;
-        
         height: 25px;
         width: 100%;
     }
@@ -35,13 +32,10 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        //outline: 1px solid rgb(228, 11, 202);
     }
 }
 
-.no-records{
-    color: red;
-}
+
 
 @media only screen
 and (max-device-width :450px) {
@@ -54,7 +48,6 @@ and (max-device-width :450px) {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background-color: rgb(0, 255, 47);
             padding: 0 0 0 0;
         }
        

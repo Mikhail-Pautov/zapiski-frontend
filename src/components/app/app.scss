@@ -9,11 +9,8 @@
 and (max-device-width :450px) {
     .app{
         justify-content:center;
-       //max-width: 450px;
-       //min-width: 0;
-       height: 100vh;
-       background-color: red;
-       margin: 0 auto;
+        height: 100vh;
+        margin: 0 auto;
     }
 }
 

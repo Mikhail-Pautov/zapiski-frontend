@@ -111,7 +111,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        //flex-wrap: wrap;
         padding: 15px 0 15px 0;
         &__text{
             font-size: 55px;
@@ -139,7 +138,6 @@
             text-align: center;
         }
         &__date{
-            //display: block;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -150,8 +148,6 @@
                 padding-left: 3px;
                 border-width: 1px;
                 border: 2px solid #CACACA;
-                //background-color: red;
-                //margin-right: 20px;
                 margin-top: 30px;
                 margin-bottom: 30px;
                 border-radius: 7px;
@@ -182,7 +178,6 @@
             position: relative;
             height: 85px;
             width: 150px;
-            
             border: 2px solid #CACACA;
             border-radius: 4px;
             padding-left: 0;
