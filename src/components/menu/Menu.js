@@ -99,7 +99,7 @@ const Menu = () => {
             <div className='menu__exit' onClick={() => {
                 setShowNotification(true)
                 document.body.style.overflow = "hidden"}}>
-                <svg  viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  viewBox="0 8 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M25.9803 41.9L25.9661 49.7409C25.9648 50.4313 26.5236 50.9919 27.2138 50.9932L49.7138 51.0339C50.4041 51.0351 50.9648 50.4765 50.9661 49.7861L51.0339 12.2862C51.0351 11.5959 50.4765 11.0352 49.7861 11.0339L27.2862 10.9932C26.5959 10.992 26.0352 11.5507 26.0339 12.241L26.0197 20.082" stroke="#CACACA" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M36 31.009L8.50003 30.9593M8.50003 30.9593L15.9832 39.7229M8.50003 30.9593L16.0158 22.2229" stroke="#CACACA" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>

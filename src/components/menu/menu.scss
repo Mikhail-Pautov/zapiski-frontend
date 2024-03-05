@@ -5,7 +5,7 @@
    
     min-width: 70px;
     height: 100%;
-    //outline: 1px solid red;
+   
     border-right: 1px solid #CACACA; 
     padding-top: 40px;
     &__plus, &__search, &__trash, &__home, &__exit{
@@ -51,6 +51,8 @@ and (max-device-width :450px) {
       padding-top: 30px;
       padding-left: 15px;
       padding-right: 10px;
+      border-bottom: 2px solid #CACACA; 
+      margin-bottom: 10px;
       
       &__home svg {
          width: 83px;
@@ -61,7 +63,7 @@ and (max-device-width :450px) {
          height: 75px;
       }
       &__exit svg{
-         width: 91px;
+         width: 98px;
          height: 95px;
       }
       &__plus, &__search, &__trash, &__home, &__exit{
