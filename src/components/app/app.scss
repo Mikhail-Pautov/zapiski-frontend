@@ -1,24 +1,19 @@
 .app {
     height: 100%;
     min-width: 950px;
-    //overflow-y: scroll;
-    //background-color: green;
     display: flex;
-    &__wrapper-content{
-        width: 100%;
-    }
-   
 }
 
-// .content {
-//     display: grid;
-//     grid-template-columns: 560px 440px;
-//     max-width: 1040px;
-//     margin: 0 auto;
-//     padding-top: 50px;
-//     &__interactive {
-//         padding-left: 40px;
-//     }
 
+@media only screen
+and (max-device-width :450px) {
+    .app{
+        justify-content:center;
+       //max-width: 450px;
+       //min-width: 0;
+       height: 100vh;
+       background-color: red;
+       margin: 0 auto;
+    }
+}
 
-// }

@@ -142,7 +142,9 @@ const SearchPanel = () => {
                     ></input>
         
                     <div className='search-panel__show-tags' onClick={() => setShowAllTags(true)}>
-                        &or; 
+                    <svg  viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 2L17 22L2 2"  strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                         {showAllTags?  <ShowAllTags arrAllTags={arrAllTags} getСhoiceTag={getСhoiceTag}/> : null}
                     </div>
                     <div className='search-panel__btn' onClick={() => {

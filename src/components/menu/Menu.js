@@ -60,21 +60,21 @@ const Menu = () => {
             <div className="menu">
             <Link to="/notes">
                 <div className="menu__home" onClick={() => {checkShowSearchPanel(); updateList()}}>
-                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M28.6667 12.2859V28.9526C28.6667 30.7936 27.1743 32.2859 25.3333 32.2859H8.66667C6.82572 32.2859 5.33333 30.7936 5.33333 28.9526V12.2859M22 32.2859V23.9526C22 22.1116 20.5077 20.6193 18.6667 20.6193H15.3333C13.4924 20.6193 12 22.1116 12 23.9526V32.2859M32 15.6193L19.357 2.97631C18.0553 1.67456 15.9447 1.67456 14.643 2.97631L2 15.6193" stroke="#CACACA" strokeWidth="3" />
                     </svg>
                 </div>
             </Link>
             
             <div className="menu__plus" onClick={() => createNote()}>
-               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <svg  viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.569 12.931V13.431H17.069H27.931C28.7928 13.431 29.5 14.1382 29.5 15C29.5 15.8618 28.7928 16.569 27.931 16.569H17.069H16.569V17.069V27.931C16.569 28.7928 15.8618 29.5 15 29.5C14.1382 29.5 13.431 28.7928 13.431 27.931V17.069V16.569H12.931H2.06897C1.20718 16.569 0.5 15.8618 0.5 15C0.5 14.1382 1.20718 13.431 2.06897 13.431H12.931H13.431V12.931V2.06897C13.431 1.20718 14.1382 0.5 15 0.5C15.8618 0.5 16.569 1.20718 16.569 2.06897V12.931Z" fill="#CACACA" stroke="#CACACA"/>
                 
                 </svg>   
             </div>
 
             <div className='menu__search' onClick={() => dispatch(hideSearhPanel())}> 
-                <svg width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="path-1-outside-1_111_108" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="34" fill="black">
                 <rect fill="white" width="34" height="34"/>
                 <path d="M24.3896 24.4216L32 31.9992ZM15.1247 7.62486C19.2666 7.62486 22.6245 10.9826 22.6245 15.1247ZM28.2493 15.1247C28.2493 7.87612 22.3732 2 15.1247 2C7.87612 2 2 7.87612 2 15.1247C2 22.3732 7.87612 28.2493 15.1247 28.2493C22.3732 28.2493 28.2493 22.3732 28.2493 15.1247Z"/>
@@ -85,7 +85,7 @@ const Menu = () => {
 
             <Link  to="/trash" >
                 <div className='menu__trash'>
-                    <svg width="30" height="30" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.73077 11.9615H11.0385V29.4231H9.73077V11.9615Z" fill="#CACACA" stroke="#CACACA"/>
                     <path d="M14.3462 11.9615H15.6539V29.4231H14.3462V11.9615Z" fill="#CACACA" stroke="#CACACA"/>
                     <path d="M18.9615 11.9615H20.2692V29.4231H18.9615V11.9615Z" fill="#CACACA" stroke="#CACACA"/>
@@ -99,7 +99,7 @@ const Menu = () => {
             <div className='menu__exit' onClick={() => {
                 setShowNotification(true)
                 document.body.style.overflow = "hidden"}}>
-                <svg width="38" height="40" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M25.9803 41.9L25.9661 49.7409C25.9648 50.4313 26.5236 50.9919 27.2138 50.9932L49.7138 51.0339C50.4041 51.0351 50.9648 50.4765 50.9661 49.7861L51.0339 12.2862C51.0351 11.5959 50.4765 11.0352 49.7861 11.0339L27.2862 10.9932C26.5959 10.992 26.0352 11.5507 26.0339 12.241L26.0197 20.082" stroke="#CACACA" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M36 31.009L8.50003 30.9593M8.50003 30.9593L15.9832 39.7229M8.50003 30.9593L16.0158 22.2229" stroke="#CACACA" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>

@@ -25,6 +25,20 @@
     &__home{
        padding: 7px;
     }
+    &__home svg {
+      width: 34px;
+      height: 34px;
+   }
+   &__plus svg, &__search svg, &__trash svg {
+      width: 30px;
+      height: 30px;
+   }
+  
+   
+   &__exit svg{
+      width: 38px;
+      height: 40px;
+   }
     &__exit{
        padding: 5px 0 0 2px;
        
@@ -32,3 +46,43 @@
     
 }
 
+@media only screen
+and (max-device-width :450px) {
+   .menu{
+      display: flex;
+      justify-content: space-between;
+      min-width: 950px;
+      background-color:aqua;
+      height: 150px;
+      padding-top: 30px;
+      padding-left: 15px;
+      padding-right: 10px;
+      
+      &__home svg {
+         width: 83px;
+         height: 83px;
+      }
+      &__plus svg,  &__search svg, &__trash svg {
+         width: 75px;
+         height: 75px;
+         
+      }
+      
+      &__exit svg{
+         width: 91px;
+         height: 95px;
+      }
+      &__plus, &__search, &__trash, &__home, &__exit{
+         width: 100px;
+         height: 100px;
+         padding: 0;
+         margin-left: 0;
+         margin-right: 0;
+         border-radius: 0;
+         
+         border: none; 
+          
+     }
+   }
+
+}

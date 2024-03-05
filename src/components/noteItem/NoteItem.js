@@ -31,7 +31,7 @@ const NoteItem = ({id, text, tags, onDeleteNote, onRecoverNote, recoverShow}) =>
                 <div className='note-item__teg'>#{tags}</div>
                 {recoverShow ? <div className='note-item__recover-note' onClick={onRecoverNote}>Восстановить</div> :
                 <div className="note-item__trash" onClick={onDeleteNote}>
-                    <svg width="14" height="20" viewBox="0 0 25 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  viewBox="0 0 25 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.19232 10.0513H9.1154V24.4359H8.19232V10.0513Z" />
                     <path d="M12.0385 10.0513H12.9615V24.4359H12.0385V10.0513Z" />
                     <path d="M15.8846 10.0513H16.8077V24.4359H15.8846V10.0513Z" />

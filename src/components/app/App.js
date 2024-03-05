@@ -25,14 +25,13 @@ const App = () => {
     return (
         <main className="app">
          
-             <Routes> 
-                 <Route path="/" element={<Login/>}/> 
-                 <Route path="notes" element={<NotesList/>}/> 
-                 <Route path="/trash" element={<Trash/>}/> 
-                {/* <Route path="*" element={<Login/>} />    */}
-             </Routes> 
+            <Routes> 
+                <Route path="/" element={<Login/>}/> 
+                <Route path="notes" element={<NotesList/>}/> 
+                <Route path="/trash" element={<Trash/>}/>  
+            </Routes> 
             
-             <CreateNote/> 
+            <CreateNote/> 
         </main>
     )
 }

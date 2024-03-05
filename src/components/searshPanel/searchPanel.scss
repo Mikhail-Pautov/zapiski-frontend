@@ -4,12 +4,15 @@
 .search-panel{
     margin-top: 4px;
     display: flex;
+    
         &__text{
+            
             color: $color-icons;
             margin-right: 10px;
             padding-right: 10px;
             margin-left: 10px;
             font-size: 15px;
+            
         }
         &__item{
             color: $color-icons;
@@ -100,3 +103,150 @@
         }
     }
 }
+
+
+@media only screen
+  and (max-device-width :450px) {
+    .search-panel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //flex-wrap: wrap;
+        padding: 15px 0 15px 0;
+        &__text{
+            font-size: 55px;
+        }
+        &__item{
+            color: $color-icons;
+            margin-right: 10px;
+            padding-right: 10px;
+            cursor: pointer;
+            font-size: 55px;
+            border-right: none;
+            &:hover{
+                color: $text-color;
+            }
+            &:last-child{
+                border: none;
+            }
+        }
+        &__clear-result{
+            margin-top: 10px;
+            margin-left: 5px;
+            font-size: 55px;
+            width: 300px;
+            outline: 2px solid #CACACA;
+            text-align: center;
+        }
+        &__date{
+            //display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 55px;
+            margin-left: 0;
+            & input{
+                color: $color-icons;
+                padding-left: 3px;
+                border-width: 1px;
+                border: 2px solid #CACACA;
+                //background-color: red;
+                //margin-right: 20px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                border-radius: 7px;
+            }
+            & input:focus{
+                outline:none;
+
+            }
+        }
+        &__teg{
+            display: flex;
+            flex-wrap: wrap;
+            & input{
+                color: $color-icons;
+                width: 550px;
+                height: 85px;
+                padding-left: 3px;
+                border-width: 1px;
+                border: 2px solid #CACACA;
+                font-size: 55px;
+                margin-right:35px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                border-radius: 7px;
+            }
+        }
+        &__show-tags{
+            position: relative;
+            height: 85px;
+            width: 150px;
+            
+            border: 2px solid #CACACA;
+            border-radius: 4px;
+            padding-left: 0;
+            margin-top: 29px;
+            margin-bottom: 0;
+            margin-right: 0;
+            font-size: 100px;
+            font-weight: bold;
+            color: $color-icons;
+            svg{
+                position: absolute;
+                top: 17px;
+                left: 45px;
+                width: 60px;
+                height: 50px;
+                stroke: $color-icons;
+            }
+        }
+        &__btn{
+            margin-left: 5px;
+            width: 300px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            color: $color-icons;
+            border: 2px solid #CACACA;
+            border-radius: 7px;
+            padding: 0 10px 0 10px;
+            font-size: 55px;
+            cursor: pointer;
+           
+        }
+       
+    }
+  }
+
+
+  @media only screen
+  and (max-device-width :450px) {
+    .allTags{
+        position: absolute;
+        min-width: 350px;
+        top: 95px;
+        right:-1px;
+        outline: 1px solid #CACACA;
+        border-radius: 4px;
+        background-color: $main-color;
+        padding: 3px 10px 0 10px;
+        &__title{
+            color: $color-icons;
+            font-size: 45px;
+        }
+        &__list{
+            li {
+                color: $color-icons;
+                list-style-type: none;
+                font-size: 55px;
+                cursor: pointer;
+                &:hover{
+                    color: $text-color; 
+                }
+            }
+        }
+    }
+
+  }
+

@@ -151,6 +151,7 @@ const NotesList = () => {
             <div className='notes'>
                 <Menu/>
                 <div className="notes__wrapper">
+                    
                     <div className="notes__searchPanel">
                         {showSearch ? <SearchPanel updateListNotes={updateListNotes}/> : null}
                     </div>

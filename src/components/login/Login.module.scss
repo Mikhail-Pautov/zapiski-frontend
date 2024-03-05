@@ -2,6 +2,7 @@
 
 .root {
     width: 400px;
+    height: 400px;
     padding: 50px;
     border: 1px solid #dedede;
     margin: 50px auto;
@@ -9,7 +10,8 @@
   }
   
   .field {
-    margin-bottom: 20px !important;
+    margin-bottom: 40px !important;
+    
   }
   
   .title {
@@ -18,3 +20,27 @@
     margin-bottom: 30px !important;
     color:  $color-icons !important;
   }
+
+  
+
+
+@media only screen
+and (max-device-width :450px) {
+  .root {
+    margin-top: 200px;
+    width: 700px;
+    height:600px;
+    padding: 50px;
+    border: 1px solid #dedede;
+  }
+
+
+  
+  .field input{
+    background-color: green;
+    font-size: 60px;
+  }
+
+  
+  
+}

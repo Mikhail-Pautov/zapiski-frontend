@@ -2,8 +2,6 @@
 
 .notes{
     display: flex;
-    //width: 100%;
-    //background-color: red;
     &__list-notes{
         display: flex;
         flex-wrap: wrap;
@@ -18,3 +16,35 @@
 }
 
 
+@media (max-width: 450px) {
+    .notes{
+        &__list-notes{
+            max-width: 390px;
+            min-width: 300px;
+            background-color: red;
+        }
+    }
+}
+
+@media only screen
+and (max-device-width :450px) {
+    .notes{
+        display: block;
+        background-color:rgb(9, 9, 231);
+        &__wrapper{
+            background-color: green;
+            width: 100%;
+            margin: 0 auto;
+        }
+        &__list-notes{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(0, 255, 47);
+            padding: 0 0 0 0;
+        }
+        &__list-msg{
+            font-size: 55px;
+        }
+    }
+}

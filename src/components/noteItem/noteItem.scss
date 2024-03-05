@@ -23,13 +23,14 @@
     &__botom{
         display: flex;
         justify-content: space-between;
-        //background-color: aqua;
-        //border-radius: 5px;
+        
+        
     }
     &__trash svg { 
         fill: #CACACA; 
         stroke: #CACACA; 
-       
+        width: 14px;
+        height: 20px;
        &:hover{
         stroke: $text-color;
        }
@@ -43,6 +44,41 @@
         cursor: pointer;
         &:hover{
             color: $text-color;
+        }
+    }
+}
+
+/* @media (max-width: 450px) {
+    .notes{
+        &__list-notes{
+            max-width: 390px;
+            min-width: 300px;
+            background-color: red;
+        }
+    }
+} */
+
+@media only screen
+and (max-device-width :450px) {
+    .note-item{
+        width: 890px; //плохо
+        height: 850px;
+        background-color: green;
+        font-size: 400%;
+        padding: 25px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        &__text{
+            border-radius: 5px;
+            line-height: 80px;
+        }
+        &__trash svg { 
+            width: 48px;
+            height: 60px;
+        }
+        &__teg, &__recover-note{
+            padding-top: 25px;
+            font-size: 50px;
         }
     }
 }

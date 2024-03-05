@@ -14,7 +14,7 @@ import { Navigate } from "react-router-dom";
 
 
 import './trash.scss';
-import './notification.scss';
+
 
 
 const Trash = () => {
