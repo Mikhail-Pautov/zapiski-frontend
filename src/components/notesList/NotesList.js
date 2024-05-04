@@ -108,10 +108,7 @@ const NotesList = () => {
        // eslint-disable-next-line  
     }, [request]);
 
-    // if(!isAuth) {
-    //     console.log('tcnm');
-    //     return redirect("/login");
-    //     }
+   //ту
 
     const renderListNotes = (arr) => {
         if(arr.lenght === 0){
