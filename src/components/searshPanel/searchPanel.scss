@@ -4,15 +4,12 @@
 .search-panel{
     margin-top: 4px;
     display: flex;
-    
         &__text{
-            
             color: $color-icons;
             margin-right: 10px;
             padding-right: 10px;
             margin-left: 10px;
             font-size: 15px;
-            
         }
         &__item{
             color: $color-icons;
@@ -55,7 +52,6 @@
             }
             & input:focus{
                 outline:none;
-
             }
         }
         &__clear-result{
@@ -74,7 +70,6 @@
             &:hover{
                 border-color: $text-color; 
             }
-           
         }
 }
 
@@ -154,7 +149,6 @@
             }
             & input:focus{
                 outline:none;
-
             }
         }
         &__teg{

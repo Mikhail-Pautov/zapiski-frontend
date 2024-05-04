@@ -1,24 +1,20 @@
-import './searchPanel.scss';
 import { useState } from 'react'; 
-import  {  selectAll, getDataSearchPanelInput, getTegSearchPanelInput }  from '../../redux/sllices/notesSlice';
 import { useSelector, useDispatch} from 'react-redux';
 
+import  {  selectAll, getDataSearchPanelInput, getTegSearchPanelInput }  from '../../redux/sllices/notesSlice';
+
+import './searchPanel.scss';
 
 const SearchPanel = () => {
 
-    
     const [showInputDate, setShowInputDate] = useState('none');
     const [showInputTag, setShowInputTag] = useState('none');
     const [showAllTags, setShowAllTags] = useState(false);
-
     const [dataInputTag, setDataInputTag] = useState('');
     const [InputDate_1, setInputDate_1] = useState('');
     const [InputDate_2, setInputDate_2] = useState('');
-    
     const dispatch = useDispatch();
-
     let notes = useSelector(selectAll);
-
     let arrAllTags = [];
     
     notes.forEach(item => {
@@ -30,11 +26,9 @@ const SearchPanel = () => {
     
     const getСhoiceTag = (tag) => {
         setDataInputTag(tag)
-        
     }
     
     const showInput = (e) => {
-        
         if(e.target.textContent === "по дате"){
             setShowInputDate('');
             setShowInputTag('none');
@@ -47,10 +41,8 @@ const SearchPanel = () => {
     }
 
 
-
     const setDate = () => {
 
-        
         let date_1 = InputDate_1.replaceAll('-', '');
         let date_2 = InputDate_2.replaceAll('-', '');
         
@@ -67,8 +59,7 @@ const SearchPanel = () => {
     }
 
     const setTeg = () => {
-        if(dataInputTag.trim() === ''){
-            
+        if(dataInputTag.trim() === ''){ 
             return;
         }
         
@@ -83,11 +74,8 @@ const SearchPanel = () => {
         const forOneWeekStart = new Date(toDay.getTime() - days).toLocaleDateString().split('.').reverse().toString().replaceAll(',', '');
         const forOneWeekAnd = new Date().toLocaleDateString().split('.').reverse().toString().replaceAll(',', '');
        
-       
         dispatch(getDataSearchPanelInput([forOneWeekStart, forOneWeekAnd]));
     }
-
-
 
 
     const updateListNotes = () => {
@@ -138,7 +126,6 @@ const SearchPanel = () => {
                         name="text"
                         value={dataInputTag}
                         onChange={(e) => setDataInputTag(e.target.value)}
-                       
                     ></input>
         
                     <div className='search-panel__show-tags' onClick={() => setShowAllTags(true)}>
@@ -169,13 +156,8 @@ const ShowAllTags = ({arrAllTags, getСhoiceTag}) => {
         return <li>{props.text}</li>;
     }
 
-    
-
-
-
     return (
         <div className='allTags'>
-            
             <div className='allTags__title'>Все теги:</div>
             <ul className='allTags__list' onClick={(e) => getСhoiceTag(e.target.innerText)}>
                 {arrAllTags.map((tag, id) => <Tag key={id} text={tag} />)}
@@ -183,7 +165,6 @@ const ShowAllTags = ({arrAllTags, getСhoiceTag}) => {
         </div>
     )
 }
-
 
 export default SearchPanel;
 

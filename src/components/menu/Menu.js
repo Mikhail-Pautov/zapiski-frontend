@@ -12,24 +12,19 @@ import './menu.scss';
 
 const Menu = () => {
     
-
-
-    
-
-    
-
     const dispatch = useDispatch();
     const checkShowSearch = useSelector(state => state.notes.showSearchPanel);
     const [ showNotification, setShowNotification] = useState(false);
     
 
-   
     dispatch(logout);
+
 
     const createNote = () => {
         dispatch(hideCreateNote());
     } 
  
+
     const updateList = () => {
         dispatch(getTegSearchPanelInput(''));
         dispatch(getDataSearchPanelInput([]));
@@ -44,16 +39,16 @@ const Menu = () => {
         }
     }
 
+
     const onExit = () => {
         dispatch(logout());
         window.localStorage.removeItem('token');
     }
 
 
-    
-
     const notification = showNotification ? <Notification msg="Уверены что хотите выйти?" clickOnYes={onExit}  setShowNotification={setShowNotification}/> : null;
 
+    
     return(
         <>
             {notification}

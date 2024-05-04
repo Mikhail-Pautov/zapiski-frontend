@@ -1,5 +1,4 @@
 
-
 export const useHttp = () => {
     
     var bearer = 'Bearer ' + window.localStorage.getItem('token');
@@ -10,15 +9,12 @@ export const useHttp = () => {
 
     }) => {
 
-        // setProcess('loading');
 
         try {
             const response = await fetch(url, {method, body, headers});
-
            
             if (!response.ok) {
-                throw new Error(`Could not fetch ${url}, status: ${response.status}`);
-                
+                throw new Error(`Could not fetch ${url}, status: ${response.status}`);  
             }
 
             

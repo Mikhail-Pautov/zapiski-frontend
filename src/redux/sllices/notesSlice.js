@@ -16,16 +16,11 @@ const initialState = notesAdapter.getInitialState({
 });
 
 
-
 export const fetchNotes = createAsyncThunk(
 	'notes/fetchNotes',
 	() => {
 		const {request} = useHttp();
-		//return request("http://localhost:3001/notes");
-        //console.log('вызов');
-		console.log(`${process.env.REACT_APP_API_URL}`);
         return request(`${process.env.REACT_APP_API_URL}/notes/`); 
-        //return request(`https://zapiski-backend-mikhail-789.amvera.io/notes/`);
 	}
 );
 
@@ -62,7 +57,6 @@ const notesSlice = createSlice({
             notesAdapter.addOne(state, action.payload);
         },
         hideCreateNote: state => {
-            
             state.showCreateNote = !state.showCreateNote;
         },
         hideSearhPanel: state => {
@@ -70,7 +64,6 @@ const notesSlice = createSlice({
         },
         getDataSearchPanelInput: (state, action) => {
             state.dataFromSearchPanelInput = action.payload;
-           
         },
         getTegSearchPanelInput: (state, action) => {
             state.dataFromSearchPanelInputByTag = action.payload
@@ -101,13 +94,9 @@ const notesSlice = createSlice({
 const {reducer, actions} = notesSlice;
 
 
-
 export default reducer;
-
-
 export const {selectAll, selectById} = notesAdapter.getSelectors(state => state.notes);
 
-//console.log();
 
 export const { 
     notesShow, 

@@ -1,16 +1,17 @@
 import { useSelector } from 'react-redux';
-import  { createNote, deleteNoteInTrash }  from '../../redux/sllices/notesSlice';
-import NoteItem from '../noteItem/NoteItem';
-import { useEffect, useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchNotesTrash, clearNotesInTrash } from '../../redux/sllices/notesSlice';
-import { useHttp } from '../../hooks/http.hook';
-
-import Menu from '../menu/Menu';
-import { Notification } from '../notification/Notification'
-import { selectIsAuth } from '../../redux/sllices/auth';
+import { useEffect, useCallback, useState } from 'react';
 import { Navigate } from "react-router-dom";
 
+import  { createNote, deleteNoteInTrash }  from '../../redux/sllices/notesSlice';
+import { fetchNotesTrash, clearNotesInTrash } from '../../redux/sllices/notesSlice';
+import { selectIsAuth } from '../../redux/sllices/auth';
+
+import NoteItem from '../noteItem/NoteItem';
+import Menu from '../menu/Menu';
+import { Notification } from '../notification/Notification';
+
+import { useHttp } from '../../hooks/http.hook';
 
 
 import './trash.scss';
@@ -25,6 +26,7 @@ const Trash = () => {
     const dispatch = useDispatch();
     const [ showNotification, setShowNotification] = useState(false);
 
+
     useEffect(() => {
         dispatch(fetchNotesTrash());
      }, []);
@@ -33,8 +35,6 @@ const Trash = () => {
     const getNotesInTradh = useSelector(state => state.notes.trash);
      
     
-
-
     const clearTrash = () => {
         getNotesInTradh.forEach(element => {
             request(`${process.env.REACT_APP_API_URL}/trash/${element._id}`, 'DELETE')
@@ -45,25 +45,18 @@ const Trash = () => {
         setShowNotification(false);
     }
 
-
-
     const onRecoverNote = useCallback((id) => {
 
-
-        
-        let note = notesInTrash.filter(item => {
-           
+        let note = notesInTrash.filter(item => { 
             return item._id === id
         }) 
 
-        
         request(`${process.env.REACT_APP_API_URL}/notes`, 'POST', JSON.stringify(...note))
             .then(() => {dispatch(createNote(...note));})
             .catch(() => {console.log('slomal')
             
         }); 
 
-        
         request(`${process.env.REACT_APP_API_URL}/trash/${id}`, 'DELETE',)
             .then(dispatch(deleteNoteInTrash(id)))
             .catch(() => console.log('error delete'));
@@ -72,16 +65,13 @@ const Trash = () => {
     }, [request]);
 
     
-
     const renderListNotesTrash = (arr) => {
         
         if(arr.lenght === 0){
             return <h4>Нет записей</h4>
         }
 
-        
-        return arr.map((item) => {
-            
+        return arr.map((item) => { 
             return <NoteItem 
                     key={item._id} 
                     {...item}
@@ -116,29 +106,12 @@ const Trash = () => {
                     <div className="trash__wrapper-content">
                         {notesList}
                     </div>
-
-                </div> 
-
-                
+                </div>  
             </div>
-        </>
-        
+        </>   
     )
 }
 
-// const Notification = ({clearTrash, setShowNotification}) => {
-//     return (
-//         <div className='notification'>
-//             <div className='notification__wrapper'>
-//                 <div className='notification__text'>Удалить записи безвозвратно?</div>
-//                 <div className='notification__wrapper-btn'>
-//                     <div className='notification__btn' onClick={() => clearTrash()}>Да</div>
-//                     <div className='notification__btn' onClick={() => setShowNotification(false)}>Нет</div>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
 export default Trash;
 
 

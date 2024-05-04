@@ -1,28 +1,7 @@
-//import { useSelector, useDispatch} from 'react-redux';
-//import { useHttp } from '../../hooks/http.hook';
-//import { deletNote } from '../cardItemsList/cardSlice';
 import './noteItem.scss';
-
 
 const NoteItem = ({id, text, tags, onDeleteNote, onRecoverNote, recoverShow}) => {
 
-
-    //console.log('note');
-
-    //const dispatch = useDispatch();
-    //const { request } = useHttp();
-
-    //const deleteNote = (e) => {
-    //    console.log(e);
-    //    request(`http://localhost:3001/notes/${e}`, 'DELETE',)
-    //    .then(dispatch(deletNote(e)))
-    //    .catch(() => console.log('error noteItem'))
-    //    console.log('delete');
-    //   
-    //}
-
-    
-   
     return (
         <div className="note-item">
             <div className="note-item__text"><p> {text}</p>
@@ -40,11 +19,9 @@ const NoteItem = ({id, text, tags, onDeleteNote, onRecoverNote, recoverShow}) =>
                     <path d="M5.14255 27.7952L5.14319 27.8034L5.1441 27.8116C5.23498 28.6295 5.95104 29.282 6.73079 29.282H18.2693C18.7056 29.282 19.0978 29.09 19.3767 28.8222C19.6483 28.5615 19.8518 28.19 19.8588 27.7782L21.614 5.21126L22.5392 5.27294L20.7837 27.8447C20.6761 29.189 19.5454 30.2051 18.2693 30.2051H6.73079C5.46296 30.2051 4.32449 29.1334 4.21635 27.8444C4.21632 27.844 4.21628 27.8435 4.21624 27.8431L2.46079 5.27294L3.38602 5.21126L5.14255 27.7952Z" />
                     </svg>
                 </div>}
-            </div>
-            
+            </div>  
         </div>
     )
 } 
-
 
 export default NoteItem;

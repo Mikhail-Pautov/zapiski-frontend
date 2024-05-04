@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
-
 import { useHttp } from '../../hooks/http.hook';
 import { useSelector, useDispatch} from 'react-redux';
 import {  createNote, hideCreateNote, fetchNotes } from '../../redux/sllices/notesSlice';
 import './createNote.scss';
-
 
 
 const CreateNote = () => {
@@ -15,11 +13,7 @@ const CreateNote = () => {
     const {request} = useHttp();
     const dispatch = useDispatch();
     const { showCreateNote } = useSelector(state => state.notes);
-    //const { data } = useSelector(state => state.auth)
     
-
-    //const userId = data.userData._id;
-    //console.log('та самая дата', userId);
 
     useEffect(() => {
         if(showCreateNote) return ;
@@ -32,7 +26,6 @@ const CreateNote = () => {
       })
     
    
-
     const hideWindow = (e) => {
         if(e.key === 'Escape'){
             console.log('loz');
@@ -41,15 +34,11 @@ const CreateNote = () => {
     }
 
 
-    
     const saveNote = () => {
-
 
         if(textTextarea === ''){
             return;
         }
-
-        
 
         let note = {
             text: textTextarea,
@@ -58,14 +47,12 @@ const CreateNote = () => {
         
         console.log('note', note);
 
-        
         request(`${process.env.REACT_APP_API_URL}/notes/`, 'POST', JSON.stringify(note))
                 .then((res) => {
                     dispatch(createNote({...note, _id: res._id})); 
                     setSavedNote(true);
                     dispatch(fetchNotes());
-                    setPostStatus('Запись опубликованна!');
-                    
+                    setPostStatus('Запись опубликованна!');   
                 })
                   
                 .catch(() => {
@@ -81,17 +68,10 @@ const CreateNote = () => {
             dispatch(hideCreateNote());
             setPostStatus('Сохранить');
         }, 2000)
-
-       
     }
 
     
-
-
-
     let toggleShowCreateNote = showCreateNote ? 'none' : '';
-    
-    
     
     return (
         <div 

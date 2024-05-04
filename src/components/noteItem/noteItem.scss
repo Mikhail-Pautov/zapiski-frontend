@@ -22,9 +22,7 @@
     }
     &__botom{
         display: flex;
-        justify-content: space-between;
-        
-        
+        justify-content: space-between; 
     }
     &__trash svg { 
         fill: #CACACA; 
@@ -48,15 +46,6 @@
     }
 }
 
-/* @media (max-width: 450px) {
-    .notes{
-        &__list-notes{
-            max-width: 390px;
-            min-width: 300px;
-            background-color: red;
-        }
-    }
-} */
 
 @media only screen
 and (max-device-width :450px) {
