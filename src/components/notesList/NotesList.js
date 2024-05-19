@@ -45,7 +45,6 @@ const NotesList = () => {
                 const firstDate = +filtersByDate[0].replaceAll('.', '');
                 const secondDate = +filtersByDate[1].replaceAll('.', '');
                
-                console.log(item);
                 let itemDate = +item.createdAt.slice(0, 10).replaceAll('-', '');
                 
                 return itemDate >= firstDate && itemDate <=  secondDate;

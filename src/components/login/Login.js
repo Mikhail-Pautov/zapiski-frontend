@@ -60,6 +60,7 @@ const Login = () => {
                     fullWidth/>
                 <TextField className={styles.field} 
                     label="Пароль"
+                    autoComplete='off'
                     error={Boolean(errors.password?.message)} 
                     helperText={errors.password?.message}
                     {...register('password', {required: 'Введите пароль'})}

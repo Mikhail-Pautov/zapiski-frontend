@@ -28,7 +28,6 @@ const CreateNote = () => {
    
     const hideWindow = (e) => {
         if(e.key === 'Escape'){
-            console.log('loz');
             dispatch(hideCreateNote())
         }
     }
@@ -42,10 +41,9 @@ const CreateNote = () => {
 
         let note = {
             text: textTextarea,
-            tags: textInput,
+            tags: textInput.toLowerCase(),
         }
         
-        console.log('note', note);
 
         request(`${process.env.REACT_APP_API_URL}/notes/`, 'POST', JSON.stringify(note))
                 .then((res) => {
@@ -56,15 +54,13 @@ const CreateNote = () => {
                 })
                   
                 .catch(() => {
-                    console.log('slomal')
-                    setPostStatus('Ошибка! Запись не сохранена.')
+                    setPostStatus('Ошибка! Запись не сохранена.');
                 }); 
         
         setTextTextarea('');
         setTextInput('');
 
         setTimeout(() => {
-            console.log('setTimeout');
             dispatch(hideCreateNote());
             setPostStatus('Сохранить');
         }, 2000)

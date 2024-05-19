@@ -2,9 +2,7 @@ import './notification.scss';
 
 
 export const Notification = (props) => {
-    console.log(props);
     const {msg, setShowNotification,  clickOnYes} = props
-    console.log(msg);
     return (
         <div className='notification'>
             <div className='notification__wrapper'>

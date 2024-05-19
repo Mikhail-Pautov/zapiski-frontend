@@ -53,7 +53,6 @@ const notesSlice = createSlice({
             state.trash.push(action.payload);
         },
         createNote: (state, action) => { 
-            console.log('action.payload', action.payload);
             notesAdapter.addOne(state, action.payload);
         },
         hideCreateNote: state => {
@@ -77,13 +76,13 @@ const notesSlice = createSlice({
             .addCase(fetchNotes.fulfilled, (state, action) => {
                 notesAdapter.setAll(state, action.payload);
             })
-            .addCase(fetchNotes.rejected, () => console.log('чет сломалось'))
+            .addCase(fetchNotes.rejected, () => console.log('сломалось'))
             //получаем корзину
             .addCase(fetchNotesTrash.pending, () => console.log('получаем из корзины'))
             .addCase(fetchNotesTrash.fulfilled, (state, action) => {
                 state.trash = action.payload;
             })
-            .addCase(fetchNotesTrash.rejected, () => console.log('чет сломалось при получении из корзины'))
+            .addCase(fetchNotesTrash.rejected, () => console.log('сломалось при получении из корзины'))
 			.addDefaultCase(() => {})
 	}
     

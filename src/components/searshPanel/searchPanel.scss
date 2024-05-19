@@ -63,14 +63,16 @@
             width: 20px;
             border: 1px solid #CACACA;
             border-radius: 4px;
-            padding-left: 4px;
             margin-right: 20px;
+            padding-bottom: 2px;
             cursor: pointer;
             color: $color-icons;
             &:hover{
                 border-color: $text-color; 
             }
         }
+        
+
 }
 
 .allTags{

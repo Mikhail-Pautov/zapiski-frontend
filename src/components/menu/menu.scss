@@ -21,6 +21,7 @@
     &__home{
        padding: 7px;
     }
+    
     &__home svg {
       width: 34px;
       height: 34px;
@@ -30,6 +31,7 @@
       height: 30px;
    }
    &__exit svg{
+      padding-top: 5px;
       width: 38px;
       height: 40px;
    }
@@ -73,6 +75,7 @@ and (max-device-width :450px) {
          border-radius: 0;
          border: none; 
      }
+     
    }
 
 }
