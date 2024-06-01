@@ -6,6 +6,7 @@ const NoteItem = ({id, text, tags, onDeleteNote, onRecoverNote, recoverShow}) =>
         <div className="note-item">
             <div className="note-item__text"><p> {text}</p>
             </div>
+            
             <div className="note-item__botom">
                 <div className='note-item__teg'>#{tags}</div>
                 {recoverShow ? <div className='note-item__recover-note' onClick={onRecoverNote}>Восстановить</div> :
